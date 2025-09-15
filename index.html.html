@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja Virtual Interativa</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>Minha Loja</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar produtos...">
+            <i class="fa fa-search"></i>
+        </div>
+    </header>
+
+    <main>
+        <div id="product-list" class="product-grid">
+            <div class="product-card" data-product-id="1">
+                <div class="image-container">
+                    <img src="imagens/produto1.png" alt="Produto 1">
+                </div>
+                <h2>Produto 1</h2>
+                <p class="price">R$ 100,00</p>
+                <div class="details-section hidden">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+                <div class="quantity-control">
+                    <button class="btn-quantity minus-btn">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="btn-quantity plus-btn">+</button>
+                </div>
+                <div class="buttons-group">
+                    <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+                    <button class="btn-view-details">Ver Detalhes</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-product-id="2">
+                <div class="image-container">
+                    <img src="imagens/produto2.png" alt="Produto 2">
+                </div>
+                <h2>Produto 2</h2>
+                <p class="price">R$ 150,00</p>
+                <div class="details-section hidden">
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div class="quantity-control">
+                    <button class="btn-quantity minus-btn">-</button>
+                    <span class="quantity-display">1</span>
+                    <button class="btn-quantity plus-btn">+</button>
+                </div>
+                <div class="buttons-group">
+                    <button class="btn-add-to-cart">Adicionar ao Carrinho</button>
+                    <button class="btn-view-details">Ver Detalhes</button>
+                </div>
+            </div>
+        </div>
+
+        <aside id="sidebar">
+            <div id="cart">
+                <h2>Carrinho de Compras</h2>
+                <div id="cart-items">
+                    </div>
+                <div id="cart-summary">
+                    <p>Total: <span id="cart-total">R$ 0,00</span></p>
+                    <button id="clearCartBtn">Limpar Carrinho</button>
+                </div>
+            </div>
+
+            <div id="checkout-form-container">
+                <h2>Checkout</h2>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+                        <span class="error-message email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Senha:</label>
+                        <input type="password" id="password" name="password">
+                        <span class="password-strength-message"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem (opcional):</label>
+                        <textarea id="message" name="message"></textarea>
+                        <span id="charCounter">0/100</span>
+                    </div>
+                    <button type="submit">Finalizar Compra</button>
+                </form>
+            </div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
